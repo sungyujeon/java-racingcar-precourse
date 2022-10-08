@@ -36,4 +36,12 @@ public class ExecutionCount {
         }
         return false;
     }
+
+    public int get() {
+        return count;
+    }
+
+    public void decrease() {
+        count--;
+    }
 }
