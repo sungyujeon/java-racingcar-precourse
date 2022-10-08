@@ -12,7 +12,7 @@ public class Name {
         this.name = name;
     }
 
-    public static Name of(String carName) {
+    public static Name valueOf(String carName) {
         validate(carName);
         return new Name(carName);
     }
