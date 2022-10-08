@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import static java.util.Comparator.comparingInt;
+
 public class Cars {
 
     private static final String DELIMITER = ",";
@@ -25,6 +27,17 @@ public class Cars {
 
     public List<Car> get() {
         return this.cars;
+    }
+
+    public List<String> winners() {
+        int maxPosition = Collections.max(cars, comparingInt(car -> car.getPosition().get())).getPosition().get();
+        List<String> winners = new ArrayList<>();
+        for (Car car : cars) {
+            if (car.getPosition().isSameWith(maxPosition)) {
+                winners.add(car.getName().get());
+            }
+        }
+        return winners;
     }
 
     private static String[] separate(String input) {

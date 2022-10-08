@@ -1,5 +1,6 @@
 package racingcar.model;
 
+import camp.nextstep.edu.missionutils.Randoms;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,6 +17,7 @@ public class CarsTest {
     void init() {
         List<String> carNames = Arrays.asList("car1", "car2", "car3");
         cars = Cars.of(carNames);
+        cars.get().get(0).getPosition().increase();
     }
 
     @Test
@@ -28,6 +30,19 @@ public class CarsTest {
         String input = "car1,car2,car3";
         Cars cars = Cars.of(input);
         assertThat(cars.get().size()).isEqualTo(3);
+    }
+
+    @Test
+    void 우승자_한명() {
+        List<String> winners = cars.winners();
+        assertThat(winners.size()).isEqualTo(1);
+    }
+
+    @Test
+    void 우승자_두명() {
+        cars.get().get(1).getPosition().increase();
+        List<String> winners = cars.winners();
+        assertThat(winners.size()).isEqualTo(2);
     }
 
 }

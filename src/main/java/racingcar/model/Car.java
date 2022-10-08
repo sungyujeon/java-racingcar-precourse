@@ -33,4 +33,7 @@ public class Car {
         return this.position;
     }
 
+    public Name getName() {
+        return name;
+    }
 }
