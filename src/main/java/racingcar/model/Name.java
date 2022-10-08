@@ -2,19 +2,19 @@ package racingcar.model;
 
 import racingcar.exception.RacingGameIllegalArgumentException;
 
-public class CarName {
+public class Name {
 
     private String name;
 
-    private CarName() {}
+    private Name() {}
 
-    private CarName(String name) {
+    private Name(String name) {
         this.name = name;
     }
 
-    public static CarName of(String carName) {
+    public static Name of(String carName) {
         validate(carName);
-        return new CarName(carName);
+        return new Name(carName);
     }
 
     private static void validate(String carName) {
