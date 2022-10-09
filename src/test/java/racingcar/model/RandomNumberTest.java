@@ -15,7 +15,7 @@ public class RandomNumberTest {
     }
 
     @Test
-    public void 랜덤_숫자_생성() {
+    void 랜덤_숫자_생성() {
         assertThat(randomNumber.next())
                 .isGreaterThanOrEqualTo(0)
                 .isLessThanOrEqualTo(9);

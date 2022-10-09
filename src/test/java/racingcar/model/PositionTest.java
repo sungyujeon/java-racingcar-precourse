@@ -9,7 +9,7 @@ public class PositionTest {
 
     @DisplayName("포지션을 증가시킨다.")
     @Test
-    public void position_increase() {
+    void position_increase() {
         Position position = new Position();
         position.increase();
 

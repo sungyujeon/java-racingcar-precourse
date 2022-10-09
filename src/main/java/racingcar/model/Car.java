@@ -22,7 +22,7 @@ public class Car {
         position.increase();
     }
 
-    public boolean isMovable(int randomNumber) {
+    boolean isMovable(int randomNumber) {
         if (randomNumber >= 4) {
             return true;
         }
@@ -34,6 +34,6 @@ public class Car {
     }
 
     public Name getName() {
-        return name;
+        return this.name;
     }
 }

@@ -9,7 +9,7 @@ class RacingGameIllegalArgumentExceptionTest {
 
     @DisplayName("예외메시지는 [ERROR]로 시작해야 한다.")
     @Test
-    public void 예외_메시지_형식_검증() {
+    void 예외_메시지_형식_검증() {
         Assertions.assertThatThrownBy(() -> Name.valueOf("abcde6"))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageStartingWith("[ERROR]");

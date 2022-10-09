@@ -7,7 +7,7 @@ import java.util.List;
 
 import static java.util.Comparator.comparingInt;
 
-public class Cars {
+public final class Cars {
 
     private static final String DELIMITER = ",";
 

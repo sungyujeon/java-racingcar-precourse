@@ -2,7 +2,7 @@ package racingcar.model;
 
 import racingcar.exception.RacingGameIllegalArgumentException;
 
-public class Name {
+public final class Name {
 
     private String name;
 

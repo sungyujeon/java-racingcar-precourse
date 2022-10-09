@@ -3,7 +3,7 @@ package racingcar.model;
 
 import racingcar.exception.RacingGameIllegalArgumentException;
 
-public class ExecutionCount {
+public final class ExecutionCount {
 
     private int count;
 
